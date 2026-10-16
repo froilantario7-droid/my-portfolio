@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Personal Portfolio</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: white;
+    color: #333;
+    transition: background 0.3s, color 0.3s;
+}
+
+header {
+    background: #eaf0f8;
+    color: #243b65;
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    text-align: center;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+nav a {
+    color: #243b65;
+    text-decoration: none;
+    margin: 5px 8px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #7048c8;
+}
+
+section {
+    max-width: 850px;
+    margin: auto;
+    padding: 25px 18px;
+}
+
+h2, h3 {
+    color: #243b65;
+}
+
+#home {
+    text-align: center;
+    padding: 35px 15px;
+    background: #f5f7fb;
+}
+
+.profile {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #7048c8;
+    margin-bottom: 10px;
+}
+
+.btn {
+    display: inline-block;
+    background: #243b65;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn:hover {
+    background: #7048c8;
+}
+
+.skills-container,
+.projects-container {
+    display: flex;
+    gap: 20px;
+}
+
+.skill {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 2px solid #243b65;
+}
+
+.project {
+    flex: 1;
+    min-width: 0;
+}
+
+.project img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    border: 2px solid #d5dceb;
+    padding: 3px;
+}
+
+.project img:hover {
+    border-color: #7048c8;
+}
+
+#contact a {
+    color: #7048c8;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #eaf0f8;
+    color: #243b65;
+}
+
+/* DARK MODE */
+body.dark-mode {
+    background: #1e1e2f;
+    color: #eeeeee;
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+    background: #292940;
+    color: #eeeeee;
+}
+
+body.dark-mode nav {
+    background: #252539;
+    border-color: #44445a;
+}
+
+body.dark-mode nav a {
+    color: #eeeeee;
+}
+
+body.dark-mode nav a:hover {
+    color: #b8a2ff;
+}
+
+body.dark-mode h2,
+body.dark-mode h3 {
+    color: #b8a2ff;
+}
+
+body.dark-mode #home {
+    background: #252539;
+}
+
+body.dark-mode .skill {
+    border-color: #8b70e0;
+}
+
+body.dark-mode .project img {
+    border-color: #777099;
+}
+
+body.dark-mode #contact a {
+    color: #b8a2ff;
+}
+
+body.dark-mode .btn {
+    background: #7048c8;
+    color: white;
+}
+
+body.dark-mode .btn:hover {
+    background: #8b70e0;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>MY PERSONAL PORTFOLIO</h1>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About Me</a>
+    <a href="#Skills">My Skills</a>
+    <a href="#projects">My Projects</a>
+    <a href="#contact">Contact Me</a>
+
+    <button id="themeToggle" class="btn" onclick="toggleTheme()">
+        Dark Mode
+    </button>
+</nav>
+
+<section id="home">
+    <img class="profile" src="profile.jpg" alt="My Profile Picture">
+
+    <h2>Froilan Tario</h2>
+    <p>I am a student interested in computers and technology.</p>
+    <p><i>"Small Steps, Big Dreams."</i></p>
+
+    <a href="#about" class="btn">About Me</a>
+</section>
+
+<section id="about">
+    <h2>About Me</h2>
+
+    <h3>My Biography</h3>
+    <p>My name is Froilan Tario. I am a student who enjoys learning new things and improving my skills.</p>
+
+    <h3>Education</h3>
+    <p>Course: ACT2C</p>
+    <p>School: Datamex College of Saint Adeline</p>
+    <p>Year Level: 2nd Year</p>
+
+    <h3>Hobbies and Interests</h3>
+    <ul>
+        <li>Playing online games</li>
+        <li>Listening to music</li>
+        <li>Watching movies</li>
+        <li>Learning about computers</li>
+    </ul>
+</section>
+
+<section id="Skills">
+    <h2>My Skills</h2>
+
+    <div class="skills-container">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">Communication</div>
+        <div class="skill">Teamwork</div>
+        <div class="skill">Problem Solving</div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>My Projects</h2>
+
+    <div class="projects-container">
+
+        <div class="project">
+            <h3>Personal Portfolio</h3>
+            <img src="project1.png" alt="Personal Portfolio">
+            <p>A website about my personal information and skills.</p>
+            <p><b>Technologies:</b> HTML and CSS</p>
+        </div>
+
+        <div class="project">
+            <h3>Student Information System</h3>
+            <img src="project2.png" alt="Personal Portfolio">
+            <p>A sample project for organizing student information.</p>
+            <p><b>Technologies:</b> Microsoft Visual Studion 2010</p>
+        </div>
+
+        <div class="project">
+            <h3>Vlog about Works of Jose Rizal</h3>
+            <img src="project3.png" alt="Personal Portfolio">   
+            <p>A project that discover how Jose Rizal impact our history.</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+
+    <p>Email: froilantario7@gmail.com</p>
+
+    <p>Facebook:
+        <a href="https://www.facebook.com/">My Facebook</a>
+    </p>
+
+    <p>Instagram:
+        <a href="https://www.instagram.com/">My Instagram</a>
+    </p>
+</section>
+
+<footer>
+    <p>© 2026 My Personal Portfolio</p>
+    <p>Created by Froilan Tario</p>
+</footer>
+
+<script>
+function toggleTheme() {
+    document.body.classList.toggle("dark-mode");
+
+    var button = document.getElementById("themeToggle");
+
+    if (document.body.classList.contains("dark-mode")) {
+        button.textContent = "Light Mode";
+    } else {
+        button.textContent = "Dark Mode";
+    }
+}
+</script>
+
+</body>
+</html>
